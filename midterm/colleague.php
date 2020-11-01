@@ -12,10 +12,8 @@
     $filtered_number = mysqli_real_escape_string($link,$_GET['number']);
 
 
-    $query = "SELECT first_name, last_name, salary, from_date, to_date
-        from salaries
-        left join employees on salaries.emp_no = employees.emp_no
-        ORDER BY salary DESC LIMIT ".$filtered_number."";
+    $query = "SELECT first_name, last_name, hire_date, title from titles left join employees 
+    on titles.emp_no = employees.emp_no order by employees.hire_date desc limit ".$filtered_number."";
 
         $result = mysqli_query($link, $query);
 
@@ -26,11 +24,9 @@
             $article .= '</td><td>';
             $article .= $row['last_name'];
             $article .= '</td><td>';
-            $article .= $row['salary'];
+            $article .= $row['hire_date'];
             $article .= '</td><td>';
-            $article .= $row['from_date'];
-            $article .= '</td><td>';
-            $article .= $row['to_date'];
+            $article .= $row['title'];
             $article .= '</td></tr>';
         }
 
@@ -42,7 +38,7 @@
 <html>
 <head>
     <meta charset = "utf-8">
-    <title> 연봉 정보 </title>
+    <title> 신입 사원 찾기 </title>
     <style>
         body{
             font-family : Consolas, monospace;
@@ -60,16 +56,18 @@
     
 </head>
 <body>
-        <h2><a href = "index.php"> 직원관리 시스템</a> | 연봉 정보</h2>
+        <h2><a href = "index.php"> 홈</a> | 👬신입 사원 찾기👩🏼‍🤝‍🧑🏻</h2>
+        <p> 사원의 명 수를 입력해 최근 입사일 순으로 신입 사원을 찾을 수 있습니다.</p>
+        <img src = "https://img.goodchobo.com/upload/editor/2018-12-1810;51;06.PNG1545097879023.png" width = "900dp" >
         <table>
             <tr>
                 <th>first_name</th>
                 <th>last_name</th>
-                <th>salary</th>
-                <th>from_date</th>
-                <th>to_date</th>
+                <th>hire_date</th>
+                <th>title</th>
             </tr>
             <?= $article ?>
         </table>
 </body>
 </html>
+
