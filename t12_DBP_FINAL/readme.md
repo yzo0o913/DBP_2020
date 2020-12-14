@@ -81,5 +81,5 @@ sql 쿼리 작성 및 웹 페이지 프로그래밍
 http://openapi.work.go.kr/opi/opi/opia/wantedApi.do?authKey=WNKIECSDX2XT7JDKXLBUU2VR1HK&callTp=L&returnType=XML&startPage=1&display=10
 
 <h5> 7. 웹 호스팅 주소 및 영상 </h5>
-주소 http://dbpt12.woobi.co.kr/index.php
+주소 http://dbpt12.woobi.co.kr/index.php </n>
 영상 https://youtu.be/ZuGC13up_Rk
