@@ -25,7 +25,7 @@ T12
 
 <ul>
 <il> 1) Index.php</il>
-![index](./Users/user/Desktop/1.jpg)
+![index](./t12_DBP_FINAL/1.jpg)
 -> 가장 메인이라고 말할 수 있는 index 페이지를 다음과 같이 구현했습니다.
 
 <il> 2) 지역별 채용 정보 -> 각각 자치구를 입력했을 경우 </il>
